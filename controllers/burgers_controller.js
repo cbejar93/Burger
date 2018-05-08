@@ -3,6 +3,7 @@ var Burger = require("../models/burger");
 var express = require("express");
 
 var router = express.Router()
+
 router.get("/", function(req, res){
             Burger.all(function(data){
                 var hbsObject = {
@@ -36,4 +37,6 @@ router.post("/api/burger", function(req, res){
          }
      })
  })
+
+ module.exports = router;
     
