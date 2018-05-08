@@ -10,7 +10,7 @@ var orm = {
         })
     },
     insertInto: function(newInput, value, cb){
-        var queryString = "INSERT INTO burgers SET ?"
+        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?,?)"
         connection.query(queryString, [newInput, value], function (err, res){
             if (err) throw err;
             console.log(res);

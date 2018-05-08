@@ -20,7 +20,7 @@ router.post("/api/burger", function(req, res){
         ][
             req.body.name, req.body.eat
         ], function(result){
-            res.json({id: result.insertId})
+            console.log("you did it!");
         })
     })
 
