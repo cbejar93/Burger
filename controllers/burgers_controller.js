@@ -18,7 +18,7 @@ router.post("/api/burger", function(req, res){
         Burger.create([
             "burger_name", "devoured" 
         ][
-            req.body.name, req.body.eat
+            req.body.name, 0
         ], function(result){
             console.log("you did it!");
         })
